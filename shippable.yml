@@ -13,4 +13,5 @@ after_script:
 
 notifications:
   email:
-    - false
+    - vidya@shippable.com
+    - vidyac.raghav@gmail.com
