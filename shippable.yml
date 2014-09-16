@@ -15,3 +15,5 @@ notifications:
   email:
     - vidya@shippable.com
     - vidyac.raghav@gmail.com
+
+archive: true
