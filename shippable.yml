@@ -19,3 +19,4 @@ notifications:
 
 archive: true
 cache: true 
+parallelized_test: true
