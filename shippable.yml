@@ -15,8 +15,11 @@ after_script:
 
 notifications:
   email:
-    - vidya@shippable.com
-    - vidyac.raghav@gmail.com
+    recipients:
+        - vidya@shippable.com
+        - vidyac.raghav@gmail.com
+    on_success: always
+  
 
 archive: true
 cache: true 
