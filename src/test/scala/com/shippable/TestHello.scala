@@ -8,7 +8,7 @@ class TestStuff extends JUnitSuite {
  val calc = new HelloWorld
 
  @ Test def oneIsOne {
-    assertEquals(1, calc square 1)
+    assertEquals(2, calc square 1)
   }
 
   @ Test def twoIsTwo {
