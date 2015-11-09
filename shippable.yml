@@ -11,7 +11,7 @@ script:
   - export SBT_OPTS="-XX:+CMSClassUnloadingEnabled -XX:PermSize=256M -XX:MaxPermSize=512M"
   - sbt clean scoverage:test
   - echo $test
-
+  - shippable_retry 'if [ $i -eq 2 ]; then echo "done"; else foobar$i; fi'
 
 after_script:
   - mkdir -p shippable/codecoverage
