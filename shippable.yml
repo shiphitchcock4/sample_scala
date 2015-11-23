@@ -20,8 +20,6 @@ after_script:
 #build_image: shippable/minv2:beta
 
 
-
-
 archive: true
 #cache: true 
 
