@@ -1,6 +1,5 @@
 language: scala
 
-
 scala:
     - 2.10.2
     - 2.11.0
@@ -20,7 +19,6 @@ after_script:
 archive: true
 #cache: true 
 
-parallelized_test: true
 
 
 
