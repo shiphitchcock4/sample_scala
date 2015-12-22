@@ -23,7 +23,7 @@ build_image: drydock/u12sca:tip
 archive: true
 #cache: true 
 
-parallelized_test: true
+#parallelized_test: true
 
 
 
