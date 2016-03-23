@@ -1,29 +1,28 @@
 language: scala
 
-env:
- - secure: hXiJ2YHIBo+7EQ05peKRPMjPIr0zgMU8nQm1XyTiG6kSUW6TA/o+0zEKvqlEl1cFsQUOBbImlh6FGZPs7FGp7rZNk8qKJibcMVtmlES19KMhOVTBLysDEn+NHfp3O5bDxlwkXyc1TnoBZPAA4wrqscrduVRD7YL97bfMFyB4MID4B9peXSUrxyblj/V8X2gsOZDqNboAIkz67waOFRAls1GGWB+Zr9O7PQBzPYSZOsN7oMAMdhhWe9jFCJI9mK6ukaC+tIehz5Lv/F6zuqUVaQagEbEl2PKZpLvtqgODj/qLjMiSY1iUSBI+Sw9KlInEZAF99cjL88C127GDmKu0WQ==
+
 
 scala:
     - 2.10.2
     - 2.11.0
+build:
+ ci:
+  - export SBT_OPTS="-XX:+CMSClassUnloadingEnabled -XX:PermSize=256M -XX:MaxPermSize=512M"
+  - sbt clean scoverage:test
+  - echo $test
+  
 
 script:
   - export SBT_OPTS="-XX:+CMSClassUnloadingEnabled -XX:PermSize=256M -XX:MaxPermSize=512M"
   - sbt clean scoverage:test
   - echo $test
-
-
-after_script:
   - mkdir -p shippable/codecoverage
   - mv target/scala-2.11/coverage-report/cobertura.xml $PWD/shippable/codecoverage/
 
-#build_image: shippable/minv2:beta
 
 
-archive: true
-#cache: true 
 
-parallelized_test: true
+
 
 
 
